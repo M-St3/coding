@@ -1,3 +1,10 @@
+liczba = int(input("Podaj liczbę: "))
+# 
+# if liczba % 3 == 0 and liczba % 5 == 0:
+#     print("Liczba jest podzielna przez 3 i 5.")
+# else:
+#     print("Liczba nie jest podzielna przez 3 i 5.")
+
 #STRING
 # first_name = "Marcin"
 # food = "sushi"
