@@ -243,7 +243,6 @@ liczba = int(input("Podaj liczbę: "))
 #         print(h, end=" ")
 #     print()
 
-    # print(str(i) * (i), ' ')
 
 # def czy_liczba_pierwsza(n):
 #     if n <= 1:
@@ -295,3 +294,37 @@ liczba = int(input("Podaj liczbę: "))
 # 
 # # Przekazanie wygenerowanych liczb jako argumenty
 # liczby_catalana(*catalan_numbers)
+
+def temp(*args):
+     if args[1] == "F":
+         print((args[0]-32)/1.8)
+    
+     elif args[1] == "C":
+         print((args[0]*1.8)+32)
+temp(float(input("Wprowadź temperaturę: ")), input("Wprowadź jednostkę w jakiej podajesz temperaturę: "))
+
+def gmean(*args):
+    w = len(args)
+    wynik= 1
+    for i in range(w):
+        wynik= wynik * args[i]
+    wynik= wynik**(1/w)
+    print(wynik)
+gmean(3,9,27)
+
+i=''
+ sumcia=0
+ while i!='x':
+     i=input('proszę podać literkę: ')
+     sumcia+=1
+ print('udało Ci się zgadnąć, oto twoja ilość nietrafień',sumcia)
+w = int(input(""""podaj liczbę: """))
+while not 1<=w<=10:
+    print(w*2)
+    w = int(input('podaj INNĄ liczbę: '))
+print(w*2)
+
+w = int(input(""""podaj liczbę: """))
+while 1<=w<=10:
+    w = int(input('podaj INNĄ liczbę: '))
+print(w*2)
