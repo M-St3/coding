@@ -264,36 +264,34 @@ liczba = int(input("Podaj liczbę: "))
 # if __name__ == "__main__":
 #     main()
 
-# def liczby_catalana():
-#
-#     catalan_numbers = []
+# def liczby_catalana(*args):
 #     parzyste = 0
 #     nieparzyste = 0
-#     n = 0
-#     catalan = 1  # C_0 = 1
-#
-#     while catalan < 1_000_000:
-#         # Dodaj bieżącą liczbę Catalana do listy
-#         catalan_numbers.append(catalan)
-#
-#         # Zlicz parzyste i nieparzyste
-#         if catalan % 2 == 0:
+# 
+#     # Przechodzenie przez liczby Catalana przekazane jako args
+#     print("Liczby Catalana mniejsze od miliona:")
+#     for liczba in args:
+#         print(liczba, end=", ")  # Wypisz każdą liczbę
+#         if liczba % 2 == 0:
 #             parzyste += 1
 #         else:
 #             nieparzyste += 1
-#
-#         # Oblicz kolejną liczbę Catalana (rekurencyjnie)
-#         n += 1
-#         catalan = catalan * (2 * (2 * n - 1)) // (n + 1)
-#
-#     # Wypisz liczby Catalana mniejsze od miliona
-#     print("Liczby Catalana mniejsze od miliona:")
-#     print(catalan_numbers)
-#
+#     print("\n")  # Nowa linia po wypisaniu liczb
+# 
 #     # Wypisz statystyki
 #     print(f"Liczb parzystych: {parzyste}")
 #     print(f"Liczb nieparzystych: {nieparzyste}")
-#
-#
-# # Uruchom funkcję
-# liczby_catalana()
+# 
+# 
+# # Generowanie liczb Catalana i przekazanie ich jako argumenty
+# catalan_numbers = []
+# n = 0
+# catalan = 1  # C_0 = 1
+# 
+# while catalan < 1_000_000:
+#     catalan_numbers.append(catalan)
+#     n += 1
+#     catalan = catalan * (2 * (2 * n - 1)) // (n + 1)
+# 
+# # Przekazanie wygenerowanych liczb jako argumenty
+# liczby_catalana(*catalan_numbers)
