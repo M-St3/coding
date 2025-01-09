@@ -1,0 +1,16 @@
+'''
+# zad.1.1
+def func(n):
+    a = 0
+    for i in range(n+1):
+        a += i**2
+    print(a)
+
+func(3)
+'''
+#Zad.1.2
+a = int(input("Podaj liczbę wariacie: "))
+def func(a):
+    while a != 0:
+        a = int(input("Podaj ponownie liczbę wariacie: "))
+        
