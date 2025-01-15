@@ -57,8 +57,8 @@
 #
 # print(frac1-frac2)
 # print(frac2)
-```
-'''
+
+
 a = [1, 4, 5, 3, 2, 6, 9, 8, 7, 10]
 b = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 def czy_posortowana(a):
