@@ -96,13 +96,13 @@ def func(a,b,c):
         c = float(input("Podaj ponownie liczbę c: "))
     else:
         if a < b + c:
-            print(True)
+            return True
         elif b < a + c:
-            print(True)
+            return True
         elif c < a + b:
-             print(True)
+             return True
         else:
-            print(False)
+            return False
 
 func(-1,2,3)
 ```
