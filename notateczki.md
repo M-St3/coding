@@ -89,22 +89,25 @@ def sum_of_digits(number):
 print(sum_of_digits(112))
 
 #Zad1.8
-def func(a,b,c):
+def func():
+    a = float(input())
+    b = float(input())
+    c = float(input())
+
     while a < 0 or b < 0 or c < 0:
-        a = float(input("Podaj ponownie liczbę a: "))
-        b = float(input("Podaj ponownie liczbę b: "))
-        c = float(input("Podaj ponownie liczbę c: "))
+        a = float(input())
+        b = float(input())
+        c = float(input())
     else:
-        if a < b + c:
+        if a > (b+c):
             return True
-        elif b < a + c:
+        elif b > (a+c):
             return True
-        elif c < a + b:
-             return True
+        elif c > (a+b):
+            return True
         else:
             return False
-
-func(-1,2,3)
+print(func())
 ```
 ```
 #3.1
