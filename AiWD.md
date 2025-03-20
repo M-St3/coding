@@ -66,3 +66,45 @@ a = np.array(2,3,4,5,6,9).reshape(2,3)
 b = np.sin(a)
 #Zadanie6
 a=np.arrange(6).reshape(2,3)
+////////////////////////////////////////////////////////
+#Zad.1,2
+#dataframe
+df = pd.read_excel('./datasets/imiona.xlsx')
+print(df)
+#a)
+a = df[df['Liczba'] > 1000]
+print(a) #typ danych seria
+#b)
+b = df[df['Imie']=='TINA']
+print(b)
+#C)
+c = df['Liczba'].sum()
+print(c)
+#d)
+d = df.groupby(['Rok'])['Liczba'].sum()
+print(d) #typ seria
+#e)
+'''
+e = df.groupby(['rok'])['Liczba'].sum()
+e.where(e < 2006)
+print(e)
+'''
+#f)
+f = df.groupby(['Rok','Plec'])['Liczba'].sum()
+print(f)
+#g)
+g = df.groupby(['Plec','Imie'])['Liczba'].max()
+print(g)
+g_k = g.loc['K']
+print(g_k)
+#g)
+g = df.groupby(['Plec','Imie'])['Liczba'].max()
+print(g)
+g_M = g.loc['M']
+print(g_M)
+'''
+#Zadanie 3
+df1 = pd.read_csv('./datasets/zamowienia.csv', sep=';')
+print(df1)
+'''
+
