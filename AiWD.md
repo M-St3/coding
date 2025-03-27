@@ -103,6 +103,63 @@ print(g)
 g_M = g.loc['M']
 print(g_M)
 '''
+///////////////////////////
+import numpy as np
+import pandas as pd
+
+#Zad.1,2
+#dataframe
+df = pd.read_excel('./datasets/imiona.xlsx')
+print(df)
+#a)
+a = df[df['Liczba'] > 1000]
+print(a,'\n') #typ danych seria
+#b)
+b = df[df['Imie']=='TINA']
+print(b,'\n')
+#C)
+c = df['Liczba'].sum()
+print(c,'\n')
+#d)
+d = df.groupby(['Rok'])['Liczba'].sum()
+print(d,'\n') #typ seria
+#e)
+
+e = df[(df['Rok'] >= 2000) & (df['Rok'] <= 2005)].groupby('Rok')['Liczba'].sum()
+print(e,'\n')
+#f)
+f = df.groupby(['Rok','Plec'])['Liczba'].sum()
+print(f,'\n')
+#g)
+g1 = df.groupby('Plec').head(1)
+g2 = df.groupby('Plec').tail(1)
+print(g1,'\n',g2,'\n')
+
+# g_k = g.loc['K']
+# print(g_k)
+# g_M = g.loc['M']
+# print(g_M)
+
+
+#h)
+# h = df.groupby(['Rok','Plec','Liczba']).loc[grupa['Liczba'].idxmax()]
+# print(h,'\n')
+
+#Zadanie 3
+df1 = pd.read_csv('./datasets/zamowienia.csv', sep=';')
+print(df1,'\n')
+#a)
+a1 = df1.groupby(['Sprzedawca']).nunique()
+print(a1,'\n')
+#b)
+b1 = df1.sort_values('Utarg', ascending=0)['Utarg'].head(5)
+print(b1,'\n')
+#c)
+c1 = df1.groupby('Sprzedawca')['idZamowienia'].count()
+print(c1,'\n')
+#d)
+d1 = df1.groupby('Kraj')['idZamowienia'].count()
+print(d1,'\n')
 #Zadanie 3
 df1 = pd.read_csv('./datasets/zamowienia.csv', sep=';')
 print(df1)
